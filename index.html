@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Staminer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body id="js-body">
+
+    <header class="header">
+        <h1 class="logo"><img src="https://fakeimg.pl/75x20/0064D9/000" /></h1>
+        <div>
+            <input type="search" placeholder="Search" />
+        </div>
+        <nav>
+            <i class="far fa-envelope"></i>
+            <i class="far fa-bell"></i>
+            <i class="fas fa-cog"></i>
+            <img src="https://fakeimg.pl/24x24/444444/000" />
+            <a href="" id="js-open">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar-container">
+                <header class="media">
+                    <img src="https://fakeimg.pl/40x40/0064D9/000" />
+                    <div class="media-body">
+                        <h3>Name Deportista</h3>
+                        <p>Deporte que juega</p>
+                    </div>
+                </header>
+                <ul class="list-group">
+                    <li class="list-group-item" data-active="inactive">
+                        <a href="">
+                            <p><i class="far fa-image"></i>Galería CV</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item" data-active="inactive">
+                        <a href="">
+                            <p><i class="fas fa-bullhorn"></i>Sponsors</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item" data-active="inactive">
+                        <a href="">
+                            <p><i class="fas fa-users"></i>Red</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span id="js-closemenu"></span>
+        </aside>
+
+        <div class="body">
+            <section class="body-container">
+                <header>
+                    <h2>Galería CV</h2>
+                </header>
+                <div class="flex-grid">
+                    <div class="flex-card">
+                        <a href="">
+                            <i class="far fa-check-circle"></i>Destacar foto
+                        </a>
+                    </div>
+                    <div class="flex-card">
+                        <a href="">
+                            <i class="far fa-images"></i>Subir foto
+                        </a>
+                        <a href="" id="js-video">
+                            <i class="far fa-file-video"></i>Subir video
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-css">
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                    <div class="flex-card">
+                        <img src="https://fakeimg.pl/500x500/E8E8E8/000" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2017. Todos los derechos reservados.</p>
+        <p>Items de Menu</p>
+    </footer>
+    <div id="pop" class="pop">
+        <span id="js-close-2"></span>
+        <div class="pop-container">
+            <header>
+                <h4>Subiendo video</h4>
+                <button id="js-close">&times;</button>
+            </header>
+            <section>
+                <div class="pop-flex">
+                    <div class="first">
+                        <i class="far fa-image"></i>
+                    </div>
+                    <div class="second">
+                        <input type="text" placeholder="Nombre del video" />
+                        <input type="text" placeholder="URL del video" />
+                    </div>
+                </div>
+                <div class="pop-block">
+                    <i class="fas fa-play"></i>
+                    <p>Enlazando servicio ...</p>
+                </div>
+            </section>
+            <footer>
+                <button id="js-cancel">Cancelar</button>
+                <button>Publicar</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        var element = document.getElementById('js-body');
+        var trigger = document.getElementById('js-video');
+        var keyclose = document.getElementById('js-close');
+        var grayclose = document.getElementById('js-close-2');
+        var cancelclose = document.getElementById('js-cancel');
+
+        var triggerMenu = document.getElementById('js-open');
+        var cancelsidebar = document.getElementById('js-closemenu');
+
+        trigger.addEventListener('click', function(e) {
+            element.classList.toggle('is-pop');
+            e.preventDefault();
+        });
+        keyclose.addEventListener('click', function(e) {
+            element.classList.remove('is-pop');
+        });
+        grayclose.addEventListener('click', function(e) {
+            element.classList.remove('is-pop');
+        });
+        cancelclose.addEventListener('click', function(e) {
+            element.classList.remove('is-pop');
+        });
+
+        triggerMenu.addEventListener('click', function(e) {
+            element.classList.toggle('is-sidebar');
+            e.preventDefault();
+        });
+        cancelsidebar.addEventListener('click', function(e) {
+            element.classList.remove('is-sidebar');
+        });
+    </script>
+
+</body>
+
+</html>

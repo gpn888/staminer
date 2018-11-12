@@ -1,0 +1,47 @@
+/* RESET */
+
+body,
+body * {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    text-decoration: inherit;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+b,
+strong,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1;
+}
+
+figure {
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}

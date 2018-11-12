@@ -1,0 +1,39 @@
+/* LIST GROUP */
+
+.list-group {
+    @include FlexLayout;
+}
+
+.list-group-item {
+    a {
+        color: $Color-Gray-02;
+        display: flex;
+        font-size: $TextSize-03;
+        padding: ($Gap-01 / 2) $Gap-01;
+        position: relative;
+        transition: .25s background-color, .25s color;
+        i {
+            font-size: 125%;
+            margin-right: $Gap-02 / 2;
+        }
+        &::before {
+            content: '';
+            background-color: $Color-Transparent;
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 0;
+            transition: .25s width;
+        }
+        &:hover {
+            background-color: $Color-Blue-Light;
+            color: $Color-Gray-01;
+            &::before {
+                background-color: $Color-Blue;
+                width: 5px;
+            }
+        }
+    }
+}

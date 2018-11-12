@@ -1,0 +1,19 @@
+/* SIDEBAR */
+
+.sidebar {
+    background-color: $Color-White;
+    .sidebar-container {
+        background-color: $Color-Gray-03;
+        padding: ($Gap-02 / 2) 0;
+    }
+}
+
+@include respond-above(sm) {
+    .sidebar {
+        min-width: $Sidebar-Width;
+        .sidebar-container {
+            margin-top: $Gap-02;
+            margin-right: $Gap-01;
+        }
+    }
+}

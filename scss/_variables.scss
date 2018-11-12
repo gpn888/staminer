@@ -1,0 +1,30 @@
+//COLORES
+$Color-White: #fff;
+$Color-Black: #000;
+$grayDark: #aaa;
+$grayLight: #f4f4f4;
+$gray: #eee;
+$blackMedium: #777;
+$ce8: #0064D9;
+$Color-Gray-01: #383A3F;
+$Color-Gray-02: #808080;
+$Color-Gray-03: #f5f5f5;
+$Color-Gray-04: #E8E8E8;
+$Color-Gray-05: #CFD2D5;
+$Color-Blue-Light: #EBF3FF;
+$Color-Blue: #0064D9;
+$Color-Transparent: none;
+//NUMERICOS
+$Gap-01: 1.25rem;
+$Gap-02: 1rem;
+$Gap-03: 1.875rem;
+$TextSize-01: 16px;
+$TextSize-02: 14px;
+$TextSize-03: 12px;
+$TextSize-04: 11px;
+$Sidebar-Width: 17.5rem;
+//MIXINS
+@mixin FlexLayout {
+    display: flex;
+    flex-direction: column;
+}

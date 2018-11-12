@@ -1,0 +1,28 @@
+/* MEDIA */
+
+.media {
+    align-items: center;
+    display: flex;
+    padding: 0 $Gap-02;
+    img {
+        border-radius: 50%;
+        margin-right: $Gap-02;
+        max-width: 2.5rem;
+    }
+    [class*='body'] {
+        align-self: center;
+        flex: 1;
+    }
+    h3 {
+        color: $blackMedium;
+        font-weight: 500;
+    }
+    p {
+        color: $grayDark;
+        font-size: .85em;
+    }
+    .sidebar & {
+        border-bottom: 1px solid $Color-Gray-05;
+        padding-bottom: $Gap-02 / 2;
+    }
+}

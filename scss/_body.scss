@@ -1,0 +1,95 @@
+/* BODY */
+
+main,
+.flex-grid {
+    @include FlexLayout;
+}
+
+.body {
+    background-color: $Color-Gray-03;
+    flex: 1;
+    margin-top: $Gap-02;
+    margin-bottom: $Gap-03;
+    .body-container {
+        padding: 0 $Gap-01 $Gap-01;
+    }
+}
+
+.body header {
+    background-color: $Color-Blue;
+    color: $Color-White;
+    padding: $Gap-02 $Gap-01;
+    h2 {
+        font-size: $TextSize-01;
+    }
+}
+
+.flex-grid .flex-card {
+    display: flex;
+    a {
+        background-color: $Color-Gray-04;
+        color: $Color-Gray-02;
+        display: inline-block;
+        flex: 1;
+        font-size: $TextSize-03;
+        padding: $Gap-02 $Gap-01;
+        transition: .25s background-color;
+        &:hover {
+            background-color: $Color-Blue-Light;
+        }
+        i {
+            font-size: $TextSize-01;
+            margin-right: $Gap-02 / 2;
+        }
+    }
+}
+
+.grid-css {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: $Gap-03;
+    &>*:first-child {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+}
+
+@include respond-above(xs) {
+    .flex-grid {
+        flex-direction: row;
+        &>* {
+            min-width: 50%;
+        }
+    }
+}
+
+@include respond-above(sm) {
+    main {
+        flex-direction: row;
+        min-height: calc(100% - 4rem);
+    }
+    .body .body-container {
+        padding-right: 0;
+    }
+}
+
+@include respond-above(lg) {
+    .grid-css {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* HEADER */
+
+.flex-header {
+    margin-bottom: 1rem;
+    .media {
+        margin: auto;
+        margin-bottom: $Gap-02;
+        position: relative;
+        z-index: 2;
+    }
+}
